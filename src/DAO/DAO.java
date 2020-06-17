@@ -18,12 +18,11 @@ public class DAO {
     public static Connection conn;
 
     public DAO() {
-        Connection con = null;
-        String url = "jdbc:mysql://localhost:3306/realbtl?useSSL=false";
+        String url = "jdbc:mysql://localhost:3306/cnpm?useSSL=false";
         String username = "root";
         String password = "0963063105";
         try {
-            con = DriverManager.getConnection(url, username, password);
+            conn = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }

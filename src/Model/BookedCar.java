@@ -75,10 +75,19 @@ public class BookedCar implements Serializable{
         this.car = car;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "BookedCar{" + "receivedDate=" + receivedDate + ", returnDate=" + returnDate + ", totalPrice=" + totalPrice + ", penAmount=" + penAmount + ", pen=" + pen + ", car=" + car + '}';
+        return "BookedCar{" + "id=" + id + ", receivedDate=" + receivedDate + ", returnDate=" + returnDate + ", totalPrice=" + totalPrice + ", penAmount=" + penAmount + ", pen=" + pen + ", car=" + car + '}';
     }
+    private int id;
     private Date receivedDate,returnDate;
     private float totalPrice,penAmount;
     private ArrayList<Penalty> pen;

@@ -16,8 +16,7 @@ public class Warrant implements Serializable{
     public Warrant() {
     }
 
-    public Warrant(int id, String type, String desc, int value) {
-        this.id = id;
+    public Warrant(String type, String desc, int value) {
         this.type = type;
         this.desc = desc;
         this.value = value;

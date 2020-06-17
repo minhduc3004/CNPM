@@ -17,8 +17,7 @@ public class Car implements Serializable{
     public Car() {
     }
 
-    public Car(int id, String name, String brand, String desc, int price, String state, CarType type, CarClassification classs) {
-        this.id = id;
+    public Car(String name, String brand, String desc, int price, String state, CarType type, CarClassification classs) {
         this.name = name;
         this.brand = brand;
         this.desc = desc;

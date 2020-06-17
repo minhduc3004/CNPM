@@ -18,8 +18,7 @@ public class Store implements Serializable{
     public Store() {
     }
 
-    public Store(int id, String name, String address, String phone, String desc, ArrayList<Car> car, ArrayList<Staff> staff) {
-        this.id = id;
+    public Store(String name, String address, String phone, String desc, ArrayList<Car> car, ArrayList<Staff> staff) {
         this.name = name;
         this.address = address;
         this.phone = phone;

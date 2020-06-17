@@ -16,8 +16,7 @@ public class DamageCatalog implements Serializable{
     public DamageCatalog() {
     }
 
-    public DamageCatalog(int id, String type, String desc, int fee) {
-        this.id = id;
+    public DamageCatalog(String type, String desc, int fee) {
         this.type = type;
         this.desc = desc;
         this.fee = fee;

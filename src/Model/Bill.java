@@ -16,8 +16,7 @@ public class Bill implements Serializable{
     public Bill() {
     }
 
-    public Bill(int id, float amount, String paymentType, String paymentDate, String note, float penaltyAmount, Staff staff, Contract contract) {
-        this.id = id;
+    public Bill(float amount, String paymentType, String paymentDate, String note, float penaltyAmount, Staff staff, Contract contract) {
         this.amount = amount;
         this.paymentType = paymentType;
         this.paymentDate = paymentDate;

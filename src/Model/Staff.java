@@ -16,8 +16,7 @@ public class Staff implements Serializable{
     public Staff() {
     }
 
-    public Staff(int id, String userName, String password, String name, String positon) {
-        this.id = id;
+    public Staff(String userName, String password, String name, String positon) {
         this.userName = userName;
         this.password = password;
         this.name = name;

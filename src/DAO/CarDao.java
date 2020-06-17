@@ -7,7 +7,6 @@ package DAO;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import Model.Car;
 
@@ -21,12 +20,13 @@ public class CarDao extends DAO {
         ArrayList<Car> res = new ArrayList<Car>();
         CarTypeDao typeDao = new CarTypeDao();
         CarClassificationDao classDao = new CarClassificationDao();
-        String sql = "SELECT * FROM tblCar WHERE name = ?, type=?,brand = ?";
+        String sql = "Select * from (Select * from tblcar where tblCarType_id = ? and tblCarClassification_id =?) t where t.name like ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, key);
-            ps.setInt(2, type);
-            ps.setInt(3, brand);
+            ps.setInt(1, type);
+            ps.setInt(2, brand);
+            ps.setString(3, "%" + key + "%");
+
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {

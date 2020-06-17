@@ -17,8 +17,7 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(int id, Date bookingDate, float amount, boolean state, ArrayList<ContractWarrant> conWarrant, ArrayList<BookedCar> car, Staff staff, Client client) {
-        this.id = id;
+    public Contract(Date bookingDate, float amount, boolean state, ArrayList<ContractWarrant> conWarrant, ArrayList<BookedCar> car, Staff staff, Client client) {
         this.bookingDate = bookingDate;
         this.amount = amount;
         this.state = state;
