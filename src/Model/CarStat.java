@@ -7,17 +7,19 @@ package Model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.ArrayList;
+import Model.BookedCar;
+import Model.CarStat;
 
-/**
- *
- * @author LEGION
- */
 public class CarStat extends Car implements Serializable{
+    public CarStat(){
+        super();
+    }
 
-    public CarStat(int totalRentTime, int amount, Date bookingDate) {
-        this.totalRentTime = totalRentTime;
+    public CarStat(int totalRentTime, int amount ) {
+        super();
         this.amount = amount;
-        this.bookingDate = bookingDate;
+        this.bookedCar = bookedCar;
     }
 
     public int getTotalRentTime() {
@@ -36,18 +38,6 @@ public class CarStat extends Car implements Serializable{
         this.amount = amount;
     }
 
-    public Date getBookingDate() {
-        return bookingDate;
-    }
-
-    public void setBookingDate(Date bookingDate) {
-        this.bookingDate = bookingDate;
-    }
-
-    @Override
-    public String toString() {
-        return "CarStat{" + "totalRentTime=" + totalRentTime + ", amount=" + amount + ", bookingDate=" + bookingDate + '}';
-    }
     private int  totalRentTime,amount;
-    private Date bookingDate;
+    private ArrayList<BookedCar> bookedCar;
 }
