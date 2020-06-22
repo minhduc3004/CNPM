@@ -13,11 +13,12 @@ import java.io.Serializable;
  */
 
 public class Car implements Serializable{
-
-    public Car() {
+    public Car(){
+        super();
     }
 
-    public Car(String name, String brand, String desc, int price, String state, CarType type, CarClassification classs) {
+    public Car(int id, String name, String brand, String desc, int price, String state, CarType type, CarClassification classs) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
         this.desc = desc;
@@ -31,70 +32,68 @@ public class Car implements Serializable{
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public String getDesc() {
         return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
     }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     public String getState() {
         return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
     }
 
     public CarType getType() {
         return type;
     }
 
-    public void setType(CarType type) {
-        this.type = type;
-    }
-
     public CarClassification getClasss() {
         return classs;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setType(CarType type) {
+        this.type = type;
     }
 
     public void setClasss(CarClassification classs) {
         this.classs = classs;
     }
 
-    @Override
-    public String toString() {
-        return "Car{" + "id=" + id + ", name=" + name + ", brand=" + brand + ", desc=" + desc + ", price=" + price + ", state=" + state + ", type=" + type + ", classs=" + classs + '}';
-    }
+    
+    
     private int id;
     private String name,brand,desc;
     private int price;
